@@ -173,10 +173,10 @@ if __name__ == "__main__":
     predictor = YoloModelPredict()
 
     # Stream the Hugging Face dataset and fine-tune.
-    predictor.train_yolo_model()
+    # predictor.train_yolo_model()
 
     # Classify images using the trained model.
-    predictor.streaming_pics(["croc.jpeg", "corc2.jpeg"])
+    predictor.streaming_pics(["exmple_file_1.jpeg", "example_file_2.jpeg"])
 
     # Classify an input video.
     # predictor.process_video("input.mp4")
