@@ -3,7 +3,7 @@ from io import BytesIO
 from datasets import load_dataset, interleave_datasets, concatenate_datasets, IterableDataset, Image, Dataset
 from loguru import logger
 
-from const import BIRD_DATASET, NATURE_DATASET, DATA_COLUMNS
+from .const import BIRD_DATASET, NATURE_DATASET, DATA_COLUMNS
 
 
 class DataSetConstruction:
@@ -155,8 +155,8 @@ class YoloConfig(DataSetConstruction):
         return train.select_columns(columns), test.select_columns(columns)
 
 
-if __name__ == "__main__":
-    ds = DataSetConstruction()
-    balanced_dataset = ds.dataset_balanced(img_num=5)
-    for _ in balanced_dataset:
-        print('', balanced_dataset.select_columns(['label', 'text']))
+# if __name__ == "__main__":
+#     ds = DataSetConstruction()
+#     balanced_dataset = ds.dataset_balanced(img_num=5)
+#     for _ in balanced_dataset:
+#         print('', balanced_dataset.select_columns(['label', 'text']))
