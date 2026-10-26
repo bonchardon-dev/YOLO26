@@ -1,0 +1,8 @@
+
+dataset_dir: data/bird_dataset
+img_num_per_class: 5994
+train_ratio: 0.8
+
+epochs: 50
+imgsz: 224
+batch: 32
